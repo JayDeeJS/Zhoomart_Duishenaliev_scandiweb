@@ -1,0 +1,59 @@
+.PLPNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 0 15px;
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+.PLPNavRight{
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PLPNavRight > a{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 7px 0;
+}
+.PLPNavRight > button{
+    border: 1px outset darkgreen;
+    border-radius: 10px;
+    background-color: lightgreen;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+}
+.PLPNavLeft{
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.PLPNavLeft > a{
+    color: darkslategrey;
+    text-decoration: none;
+    padding: 7px 0;
+    text-transform: uppercase;
+}
+.PLPNavCenter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+a[class='active']{
+    border-bottom: 3px ridge green;
+}
+
+.logo{
+    padding-right: 49px;
+}
