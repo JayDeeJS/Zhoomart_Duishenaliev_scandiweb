@@ -7,9 +7,21 @@ import PLPHeader from "./PLPHeader/PLPHeader";
 import PLPTech from "./PLPTech/PLPTech";
 import PLPClothes from "./PLPClothes/PLPClothes";
 import PLPAll from "./PLPAll/PLPAll";
-import PDP from "./PDP/PDP";
+import PDPNike from "./PDP/PDPNike/PDPNike";
+import {useStateValue} from "./StateProvider";
 
 function App() {
+    const [{
+        clothesNike,
+        clothesJacket,
+        techPS5, amountPS5,
+        techXbox,
+        techiMac,
+        techiPhone,
+        techAirpods,
+        techAirtag
+    }] = useStateValue();
+
     return (
         <ApolloProvider client={client}>
             <div className="PLP__container">
@@ -19,7 +31,8 @@ function App() {
                         <Route path="/" element={<PLPAll/>}/>
                         <Route path="/clothes" element={<PLPClothes/>}/>
                         <Route path="/tech" element={<PLPTech/>}/>
-                        <Route path="/pdp/:id/:name/:price/:symbol" element={<PDP/>}/>
+                        <Route path={`pdp/${clothesNike.id}`} element={<PDPNike/>}/>
+                        <Route path={`/clothes/pdp/${clothesNike.id}`} element={<PDPNike/>}/>
                     </Routes>
                 </div>
             </div>

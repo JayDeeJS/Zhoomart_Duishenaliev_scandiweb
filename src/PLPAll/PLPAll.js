@@ -1,87 +1,105 @@
 import React from 'react';
 import PLPProduct from "../PLPProduct/PLPProduct";
 import {useStateValue} from "../StateProvider";
+import {Link} from "react-router-dom";
 
 const PLPAll = () => {
     const [{
-        data,
-        amountNike,
-        amountJacket,
-        amountPS5,
-        amountXbox,
-        amountiMac,
-        amountiPhone,
-        amountAirPods,
-        amountAirTag,
-        symbol
+        clothesNike, amountNike,
+        clothesJacket, amountJacket,
+        techPS5, amountPS5,
+        techXbox, amountXbox,
+        techiMac, amountiMac,
+        techiPhone, amountiPhone,
+        techAirpods, amountAirPods,
+        techAirtag, amountAirTag, symbol
     }] = useStateValue();
 
     return (
         <div className="PLP">
-            <PLPProduct
-                id={data.clothesNike.id}
-                name={data.clothesNike.name}
-                inStock={data.clothesNike.inStock}
-                symbol={symbol}
-                amount={amountNike}
-                gallery={data.clothesNike.gallery}
-            />
-            <PLPProduct
-                id={data.clothesJacket.id}
-                name={data.clothesJacket.name}
-                inStock={data.clothesJacket.inStock}
-                symbol={symbol}
-                amount={amountJacket}
-                gallery={data.clothesJacket.gallery}
-            />
-            <PLPProduct
-                id={data.techPS5.id}
-                name={data.techPS5.name}
-                inStock={data.techPS5.inStock}
-                symbol={symbol}
-                amount={amountPS5}
-                gallery={data.techPS5.gallery}
-            />
-            <PLPProduct
-                id={data.techXbox.id}
-                name={data.techXbox.name}
-                inStock={data.techXbox.inStock}
-                symbol={symbol}
-                amount={amountXbox}
-                gallery={data.techXbox.gallery}
-            />
-            <PLPProduct
-                id={data.techiMac.id}
-                name={data.techiMac.name}
-                inStock={data.techiMac.inStock}
-                symbol={symbol}
-                amount={amountiMac}
-                gallery={data.techiMac.gallery}
-            />
-            <PLPProduct
-                id={data.techiPhone.id}
-                name={data.techiPhone.name}
-                inStock={data.techiPhone.inStock}
-                symbol={symbol}
-                amount={amountiPhone}
-                gallery={data.techiPhone.gallery}
-            />
-            <PLPProduct
-                id={data.techAirpods.id}
-                name={data.techAirpods.name}
-                inStock={data.techAirpods.inStock}
-                symbol={symbol}
-                amount={amountAirPods}
-                gallery={data.techAirpods.gallery}
-            />
-            <PLPProduct
-                id={data.techAirtag.id}
-                name={data.techAirtag.name}
-                inStock={data.techAirtag.inStock}
-                symbol={symbol}
-                amount={amountAirTag}
-                gallery={data.techAirtag.gallery}
-            />
+            <h2>ALL</h2>
+            <div className="PLP__products">
+                <Link to={`pdp/${clothesNike.id}`}>
+                    <PLPProduct
+                        id={clothesNike.id}
+                        name={clothesNike.name}
+                        inStock={clothesNike.inStock}
+                        symbol={symbol}
+                        amount={amountNike}
+                        gallery={clothesNike.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${clothesJacket.id}`}>
+                    <PLPProduct
+                        id={clothesJacket.id}
+                        name={clothesJacket.name}
+                        inStock={clothesJacket.inStock}
+                        symbol={symbol}
+                        amount={amountJacket}
+                        gallery={clothesJacket.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techPS5.id}`}>
+                    <PLPProduct
+                        id={techPS5.id}
+                        name={techPS5.name}
+                        inStock={techPS5.inStock}
+                        symbol={symbol}
+                        amount={amountPS5}
+                        gallery={techPS5.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techXbox.id}`}>
+                    <PLPProduct
+                        id={techXbox.id}
+                        name={techXbox.name}
+                        inStock={techXbox.inStock}
+                        symbol={symbol}
+                        amount={amountXbox}
+                        gallery={techXbox.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techiMac.id}`}>
+                    <PLPProduct
+                        id={techiMac.id}
+                        name={techiMac.name}
+                        inStock={techiMac.inStock}
+                        symbol={symbol}
+                        amount={amountiMac}
+                        gallery={techiMac.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techiPhone.id}`}>
+                    <PLPProduct
+                        id={techiPhone.id}
+                        name={techiPhone.name}
+                        inStock={techiPhone.inStock}
+                        symbol={symbol}
+                        amount={amountiPhone}
+                        gallery={techiPhone.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techAirpods.id}`}>
+                    <PLPProduct
+                        id={techAirpods.id}
+                        name={techAirpods.name}
+                        inStock={techAirpods.inStock}
+                        symbol={symbol}
+                        amount={amountAirPods}
+                        gallery={techAirpods.gallery}
+                    />
+                </Link>
+                <Link to={`pdp/${techAirtag.id}`}>
+                    <PLPProduct
+                        id={techAirtag.id}
+                        name={techAirtag.name}
+                        inStock={techAirtag.inStock}
+                        symbol={symbol}
+                        amount={amountAirTag}
+                        gallery={techAirtag.gallery}
+                    />
+                </Link>
+            </div>
         </div>
     );
 };

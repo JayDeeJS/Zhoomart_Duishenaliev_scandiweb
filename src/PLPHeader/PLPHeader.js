@@ -57,7 +57,6 @@ const DisplayTechName = () => {
 const PLPHeader = () => {
 
     const [{symbol}, dispatch] = useStateValue();
-    console.log(symbol);
 
     const displayModalSwitcher = () => {
         const modalSwitcher = document.querySelector('.modalSwitcher');
@@ -183,11 +182,11 @@ const PLPHeader = () => {
                         className='minimizer'>
                         &#10006;
                     </span>
-                    <span onClick={switchToUSDollar} className='symbol'>$</span>
-                    <span onClick={switchToUKPound} className='symbol'>£</span>
-                    <span onClick={switchTOAUDollar} className='symbol'>A$</span>
-                    <span onClick={switchToJPYen} className='symbol'>¥</span>
-                    <span onClick={switchToRURuble} className='symbol'>₽</span>
+                    <span onClick={switchToUSDollar} className='symbol'>$ USD</span>
+                    <span onClick={switchToUKPound} className='symbol'>£ GBP</span>
+                    <span onClick={switchTOAUDollar} className='symbol'>A$ AUD</span>
+                    <span onClick={switchToJPYen} className='symbol'>¥ JPY</span>
+                    <span onClick={switchToRURuble} className='symbol'>₽ RUB</span>
                 </div>
             </div>
         </>
