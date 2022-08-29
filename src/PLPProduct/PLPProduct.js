@@ -6,7 +6,6 @@ const PLPProduct = ({id, name, gallery, amount, symbol, inStock}) => {
     return (
         inStock === true
             ? <div key={id} className="PLPProduct">
-
                 <div className="PLPProduct__sub">
                     <img src={gallery} alt="product-gallery"/>
                     <div className="PLPProduct__subAlign">
@@ -16,7 +15,6 @@ const PLPProduct = ({id, name, gallery, amount, symbol, inStock}) => {
                         </p>
                     </div>
                 </div>
-
             </div>
             : <div key={id} className="PLPProduct__outOfStock">
                 <div className="PLPProduct__sub">

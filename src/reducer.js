@@ -13,7 +13,6 @@ export const initialState = {
     amountAirTag: 120.57,
 
     clothesNikeAlbum: {
-        id: 'nike',
         gallery1: "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_2_720x.jpg?v=1612816087",
         gallery2: "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_1_720x.jpg?v=1612816087",
         gallery3: "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_3_720x.jpg?v=1612816087",
@@ -21,54 +20,72 @@ export const initialState = {
         gallery5: "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_4_720x.jpg?v=1612816087",
     },
 
+    clothesJacketAlbum: {
+        gallery1: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg",
+        gallery2: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016107/product-image/2409L_61_a.jpg",
+        gallery3: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016108/product-image/2409L_61_b.jpg",
+        gallery4: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016109/product-image/2409L_61_c.jpg",
+        gallery5: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016110/product-image/2409L_61_d.jpg",
+        gallery6: "https://images.canadagoose.com/image/upload/w_1333,c_scale,f_auto,q_auto:best/v1634058169/product-image/2409L_61_o.png",
+        gallery7: "https://images.canadagoose.com/image/upload/w_1333,c_scale,f_auto,q_auto:best/v1634058159/product-image/2409L_61_p.png",
+    },
+
+    clothesNikeGallery: "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_2_720x.jpg?v=1612816087",
+    clothesJacketGallery: "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg",
+    techPS5Gallery: "https://images-na.ssl-images-amazon.com/images/I/510VSJ9mWDL._SL1262_.jpg",
+    techXboxGallery: "https://images-na.ssl-images-amazon.com/images/I/71vPCX0bS-L._SL1500_.jpg",
+    techiMacGallery: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
+    techiPhoneGallery: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000",
+    techAirpodsGallery: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1591634795000",
+    techAirtagGallery: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-double-select-202104?wid=445&hei=370&fmt=jpeg&qlt=95&.v=1617761672000",
+
     clothesNike: {
         id: 'huarache-x-stussy-le',
         name: 'Nike Air Huarache Le',
         description: 'Great sneakers for everyday use!',
         inStock: true,
-        gallery: 'https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_2_720x.jpg?v=1612816087'
     },
     clothesJacket: {
         id: 'jacket-canada-goosee',
         name: 'Jacket',
+        description: 'Awesome winter jacket!',
         inStock: true,
-        gallery: 'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg'
     },
     techPS5: {
         id: 'ps-5',
         name: 'PlayStation 5',
+        description: '',
         inStock: false,
-        gallery: 'https://images-na.ssl-images-amazon.com/images/I/510VSJ9mWDL._SL1262_.jpg'
     },
     techXbox: {
         id: 'xbox-series-s',
         name: 'Xbox Series S 512GB',
+        description: '',
         inStock: false,
-        gallery: 'https://images-na.ssl-images-amazon.com/images/I/71vPCX0bS-L._SL1500_.jpg'
     },
     techiMac: {
         id: 'apple-imac-2021',
         name: 'iMac 2021',
+        description: '',
         inStock: true,
-        gallery: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000'
     },
     techiPhone: {
         id: 'apple-iphone-12-pro',
         name: 'iPhone 12 Pro',
+        description: '',
         inStock: true,
-        gallery: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000'
     },
     techAirpods: {
         id: 'apple-airpods-pro',
         name: 'AirPods Pro',
+        description: '',
         inStock: false,
-        gallery: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1591634795000'
     },
     techAirtag: {
         id: 'apple-airtag',
         name: 'AirTag',
+        description: '',
         inStock: true,
-        gallery: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-double-select-202104?wid=445&hei=370&fmt=jpeg&qlt=95&.v=1617761672000'
     }
 
 }
@@ -146,10 +163,76 @@ const reducer = (state, action) => {
                 amountAirTag: action.amountAirTag,
             }
 
-        case 'NAVIGATE_TO_PRODUCT':
+        case 'TOGGLE_NIKE_GALLERY1':
             return {
                 ...state,
-                product: [...state.product, action.item],
+                clothesNikeGallery: action.clothesNikeGallery
+            }
+
+        case 'TOGGLE_NIKE_GALLERY2':
+            return {
+                ...state,
+                clothesNikeGallery: action.clothesNikeGallery
+            }
+
+        case 'TOGGLE_NIKE_GALLERY3':
+            return {
+                ...state,
+                clothesNikeGallery: action.clothesNikeGallery
+            }
+
+        case 'TOGGLE_NIKE_GALLERY4':
+            return {
+                ...state,
+                clothesNikeGallery: action.clothesNikeGallery
+            }
+
+        case 'TOGGLE_NIKE_GALLERY5':
+            return {
+                ...state,
+                clothesNikeGallery: action.clothesNikeGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY1':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY2':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY3':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY4':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY5':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY6':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
+            }
+
+        case 'TOGGLE_JACKET_GALLERY7':
+            return {
+                ...state,
+                clothesJacketGallery: action.clothesJacketGallery
             }
 
         case 'ADD_TO_CART':

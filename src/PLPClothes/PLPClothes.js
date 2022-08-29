@@ -4,7 +4,10 @@ import {useStateValue} from "../StateProvider";
 import {Link} from "react-router-dom";
 
 const PLPClothes = () => {
-    const [{clothesNike, clothesJacket, amountNike, amountJacket, symbol}] = useStateValue();
+    const [{
+        clothesNike, clothesNikeGallery, amountNike,
+        clothesJacket, clothesJacketGallery, amountJacket, symbol
+    }] = useStateValue();
 
     return (
         <div className="PLP">
@@ -17,7 +20,7 @@ const PLPClothes = () => {
                         inStock={clothesNike.inStock}
                         symbol={symbol}
                         amount={amountNike}
-                        gallery={clothesNike.gallery}
+                        gallery={clothesNikeGallery}
                     />
                 </Link>
                 <Link to={`pdp/${clothesJacket.id}`}>
@@ -27,7 +30,7 @@ const PLPClothes = () => {
                         inStock={clothesJacket.inStock}
                         symbol={symbol}
                         amount={amountJacket}
-                        gallery={clothesJacket.gallery}
+                        gallery={clothesJacketGallery}
                     />
                 </Link>
             </div>

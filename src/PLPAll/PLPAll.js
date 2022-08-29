@@ -5,14 +5,14 @@ import {Link} from "react-router-dom";
 
 const PLPAll = () => {
     const [{
-        clothesNike, amountNike,
-        clothesJacket, amountJacket,
-        techPS5, amountPS5,
-        techXbox, amountXbox,
-        techiMac, amountiMac,
-        techiPhone, amountiPhone,
-        techAirpods, amountAirPods,
-        techAirtag, amountAirTag, symbol
+        clothesNike, clothesNikeGallery, amountNike,
+        clothesJacket, clothesJacketGallery, amountJacket,
+        techPS5, techPS5Gallery, amountPS5,
+        techXbox, techXboxGallery, amountXbox,
+        techiMac, techiMacGallery, amountiMac,
+        techiPhone, techiPhoneGallery, amountiPhone,
+        techAirpods, techAirpodsGallery, amountAirPods,
+        techAirtag, techAirtagGallery, amountAirTag, symbol
     }] = useStateValue();
 
     return (
@@ -26,7 +26,7 @@ const PLPAll = () => {
                         inStock={clothesNike.inStock}
                         symbol={symbol}
                         amount={amountNike}
-                        gallery={clothesNike.gallery}
+                        gallery={clothesNikeGallery}
                     />
                 </Link>
                 <Link to={`pdp/${clothesJacket.id}`}>
@@ -36,7 +36,7 @@ const PLPAll = () => {
                         inStock={clothesJacket.inStock}
                         symbol={symbol}
                         amount={amountJacket}
-                        gallery={clothesJacket.gallery}
+                        gallery={clothesJacketGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techPS5.id}`}>
@@ -46,7 +46,7 @@ const PLPAll = () => {
                         inStock={techPS5.inStock}
                         symbol={symbol}
                         amount={amountPS5}
-                        gallery={techPS5.gallery}
+                        gallery={techPS5Gallery}
                     />
                 </Link>
                 <Link to={`pdp/${techXbox.id}`}>
@@ -56,7 +56,7 @@ const PLPAll = () => {
                         inStock={techXbox.inStock}
                         symbol={symbol}
                         amount={amountXbox}
-                        gallery={techXbox.gallery}
+                        gallery={techXboxGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techiMac.id}`}>
@@ -66,7 +66,7 @@ const PLPAll = () => {
                         inStock={techiMac.inStock}
                         symbol={symbol}
                         amount={amountiMac}
-                        gallery={techiMac.gallery}
+                        gallery={techiMacGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techiPhone.id}`}>
@@ -76,7 +76,7 @@ const PLPAll = () => {
                         inStock={techiPhone.inStock}
                         symbol={symbol}
                         amount={amountiPhone}
-                        gallery={techiPhone.gallery}
+                        gallery={techiPhoneGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techAirpods.id}`}>
@@ -86,7 +86,7 @@ const PLPAll = () => {
                         inStock={techAirpods.inStock}
                         symbol={symbol}
                         amount={amountAirPods}
-                        gallery={techAirpods.gallery}
+                        gallery={techAirpodsGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techAirtag.id}`}>
@@ -96,7 +96,7 @@ const PLPAll = () => {
                         inStock={techAirtag.inStock}
                         symbol={symbol}
                         amount={amountAirTag}
-                        gallery={techAirtag.gallery}
+                        gallery={techAirtagGallery}
                     />
                 </Link>
             </div>

@@ -5,12 +5,12 @@ import {Link} from "react-router-dom";
 
 const PLPTech = () => {
     const [{
-        techPS5, amountPS5,
-        techXbox, amountXbox,
-        techiMac, amountiMac,
-        techiPhone, amountiPhone,
-        techAirpods, amountAirPods,
-        techAirtag, amountAirTag, symbol
+        techPS5, techPS5Gallery, amountPS5,
+        techXbox, techXboxGallery, amountXbox,
+        techiMac, techiMacGallery, amountiMac,
+        techiPhone, techiPhoneGallery, amountiPhone,
+        techAirpods, techAirpodsGallery, amountAirPods,
+        techAirtag, techAirtagGallery, amountAirTag, symbol
     }] = useStateValue();
 
     return (
@@ -24,7 +24,7 @@ const PLPTech = () => {
                         inStock={techPS5.inStock}
                         symbol={symbol}
                         amount={amountPS5}
-                        gallery={techPS5.gallery}
+                        gallery={techPS5Gallery}
                     />
                 </Link>
                 <Link to={`pdp/${techXbox.id}`}>
@@ -34,7 +34,7 @@ const PLPTech = () => {
                         inStock={techXbox.inStock}
                         symbol={symbol}
                         amount={amountXbox}
-                        gallery={techXbox.gallery}
+                        gallery={techXboxGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techiMac.id}`}>
@@ -44,7 +44,7 @@ const PLPTech = () => {
                         inStock={techiMac.inStock}
                         symbol={symbol}
                         amount={amountiMac}
-                        gallery={techiMac.gallery}
+                        gallery={techiMacGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techiPhone.id}`}>
@@ -54,7 +54,7 @@ const PLPTech = () => {
                         inStock={techiPhone.inStock}
                         symbol={symbol}
                         amount={amountiPhone}
-                        gallery={techiPhone.gallery}
+                        gallery={techiPhoneGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techAirpods.id}`}>
@@ -64,7 +64,7 @@ const PLPTech = () => {
                         inStock={techAirpods.inStock}
                         symbol={symbol}
                         amount={amountAirPods}
-                        gallery={techAirpods.gallery}
+                        gallery={techAirpodsGallery}
                     />
                 </Link>
                 <Link to={`pdp/${techAirtag.id}`}>
@@ -74,7 +74,7 @@ const PLPTech = () => {
                         inStock={techAirtag.inStock}
                         symbol={symbol}
                         amount={amountAirTag}
-                        gallery={techAirtag.gallery}
+                        gallery={techAirtagGallery}
                     />
                 </Link>
             </div>
