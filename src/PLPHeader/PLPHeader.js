@@ -78,8 +78,8 @@ const PLPHeader = () => {
             amountXbox: 333.99,
             amountiMac: 1688.03,
             amountiPhone: 1000.76,
-            amountAirPods: 300.23,
-            amountAirTag: 120.57,
+            amountAirpods: 300.23,
+            amountAirtag: 120.57,
         })
     }
 
@@ -93,8 +93,8 @@ const PLPHeader = () => {
             amountXbox: 240.07,
             amountiMac: 1213.34,
             amountiPhone: 719.34,
-            amountAirPods: 215.8,
-            amountAirTag: 86.67,
+            amountAirpods: 215.8,
+            amountAirtag: 86.67,
         })
     }
 
@@ -108,8 +108,8 @@ const PLPHeader = () => {
             amountXbox: 430.85,
             amountiMac: 2177.57,
             amountiPhone: 1290.99,
-            amountAirPods: 387.3,
-            amountAirTag: 155.54,
+            amountAirpods: 387.3,
+            amountAirtag: 155.54,
         })
     }
 
@@ -123,8 +123,8 @@ const PLPHeader = () => {
             amountXbox: 36068.27,
             amountiMac: 182294.51,
             amountiPhone: 108074.6,
-            amountAirPods: 32422.38,
-            amountAirTag: 13021.04,
+            amountAirpods: 32422.38,
+            amountAirtag: 13021.04,
         })
     }
 
@@ -138,8 +138,8 @@ const PLPHeader = () => {
             amountXbox: 25257.22,
             amountiMac: 127653.82,
             amountiPhone: 75680.48,
-            amountAirPods: 22704.14,
-            amountAirTag: 9118.13,
+            amountAirpods: 22704.14,
+            amountAirtag: 9118.13,
         })
     }
 

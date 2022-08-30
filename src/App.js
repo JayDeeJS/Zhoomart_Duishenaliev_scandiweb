@@ -10,6 +10,13 @@ import PLPClothes from "./PLPClothes/PLPClothes";
 import PLPAll from "./PLPAll/PLPAll";
 import PDPNike from "./PDP/PDPNike/PDPNike";
 import PDPJacket from "./PDP/PDPJacket/PDPJacket";
+import PDPPS5 from "./PDP/PDPPS5/PDPPS5";
+import PDPXbox from "./PDP/PDPXbox/PDPXbox";
+import PDPiMac from "./PDP/PDPiMac/PDPiMac";
+import PDPiPhone from "./PDP/PDPiPhone/PDPiPhone";
+import PDPAirPods from "./PDP/PDPAirPods/PDPAirPods";
+import PDPAirTag from "./PDP/PDPAirTag/PDPAirTag";
+import Cart from "./Cart/Cart";
 
 function App() {
     const [{
@@ -32,6 +39,19 @@ function App() {
                         <Route path={`/clothes/pdp/${clothesNike.id}`} element={<PDPNike/>}/>
                         <Route path={`/pdp/${clothesJacket.id}`} element={<PDPJacket/>}/>
                         <Route path={`/clothes/pdp/${clothesJacket.id}`} element={<PDPJacket/>}/>
+                        <Route path={`/pdp/${techPS5.id}`} element={<PDPPS5/>}/>
+                        <Route path={`/tech/pdp/${techPS5.id}`} element={<PDPPS5/>}/>
+                        <Route path={`/pdp/${techXbox.id}`} element={<PDPXbox/>}/>
+                        <Route path={`/tech/pdp/${techXbox.id}`} element={<PDPXbox/>}/>
+                        <Route path={`/pdp/${techiMac.id}`} element={<PDPiMac/>}/>
+                        <Route path={`/tech/pdp/${techiMac.id}`} element={<PDPiMac/>}/>
+                        <Route path={`/pdp/${techiPhone.id}`} element={<PDPiPhone/>}/>
+                        <Route path={`/tech/pdp/${techiPhone.id}`} element={<PDPiPhone/>}/>
+                        <Route path={`/pdp/${techAirpods.id}`} element={<PDPAirPods/>}/>
+                        <Route path={`/tech/pdp/${techAirpods.id}`} element={<PDPAirPods/>}/>
+                        <Route path={`/pdp/${techAirtag.id}`} element={<PDPAirTag/>}/>
+                        <Route path={`/tech/pdp/${techAirtag.id}`} element={<PDPAirTag/>}/>
+                        <Route path="/cart" element={<Cart/>}/>
                     </Routes>
                 </div>
             </div>

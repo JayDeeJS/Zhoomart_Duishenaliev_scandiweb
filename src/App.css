@@ -68,14 +68,12 @@
 .PDP__product{
     width: 100%;
     height: 600px;
-    border: 1px solid limegreen;
     display: flex;
     justify-content: space-between;
 }
 .PDP__productImage{
     width: 60%;
     height: 100%;
-    border: 1px solid blue;
     display: flex;
     justify-content: space-between;
 }
@@ -99,6 +97,9 @@
 .PDP__productHighlightedImage{
     width: 70%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .PDP__productHighlightedImage > img{
     width: 90%;
@@ -108,10 +109,15 @@
 .PDP__productInfo{
     width: 40%;
     height: 100%;
-    border: 1px solid lightcoral;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.PDP__productInfo > p{
+    width: 60%;
+}
+.PDP__price{
+    margin-bottom: 30px;
 }
 .PDP__productInfo > button{
     width: 150px;
@@ -120,6 +126,12 @@
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    margin-bottom: 15px;
+}
+.PDP__productInfoNoStock{
+    background-color: lightsalmon;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .minimizer{

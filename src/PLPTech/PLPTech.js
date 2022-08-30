@@ -9,8 +9,8 @@ const PLPTech = () => {
         techXbox, techXboxGallery, amountXbox,
         techiMac, techiMacGallery, amountiMac,
         techiPhone, techiPhoneGallery, amountiPhone,
-        techAirpods, techAirpodsGallery, amountAirPods,
-        techAirtag, techAirtagGallery, amountAirTag, symbol
+        techAirpods, techAirpodsGallery, amountAirpods,
+        techAirtag, techAirtagGallery, amountAirtag, symbol
     }] = useStateValue();
 
     return (
@@ -63,7 +63,7 @@ const PLPTech = () => {
                         name={techAirpods.name}
                         inStock={techAirpods.inStock}
                         symbol={symbol}
-                        amount={amountAirPods}
+                        amount={amountAirpods}
                         gallery={techAirpodsGallery}
                     />
                 </Link>
@@ -73,7 +73,7 @@ const PLPTech = () => {
                         name={techAirtag.name}
                         inStock={techAirtag.inStock}
                         symbol={symbol}
-                        amount={amountAirTag}
+                        amount={amountAirtag}
                         gallery={techAirtagGallery}
                     />
                 </Link>

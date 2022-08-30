@@ -2,7 +2,10 @@ import React from 'react';
 import {useStateValue} from "../../StateProvider";
 
 const PDPNike = () => {
-    const [{clothesNikeAlbum, clothesNikeGallery, clothesNike, amountNike, symbol}, dispatch] = useStateValue();
+    const [{
+        clothesNikeAlbum, clothesNikeGallery,
+        clothesNike, amountNike, symbol
+    }, dispatch] = useStateValue();
 
     const toggleNikeGallery1 = () => {
         dispatch({
@@ -39,31 +42,69 @@ const PDPNike = () => {
         })
     }
 
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: clothesNike.id,
+                name: clothesNike.name,
+                gallery: clothesNikeGallery,
+                description: clothesNike.description,
+                amount: amountNike,
+                symbol: symbol,
+            }
+        })
+    }
+
     return (
-        <div className="PDP__product">
-            <div className="PDP__productImage">
-                <div className="PDP__productAlbum">
-                    <img onClick={toggleNikeGallery1} src={clothesNikeAlbum.gallery1} alt="gallery"/>
-                    <img onClick={toggleNikeGallery2} src={clothesNikeAlbum.gallery2} alt="gallery"/>
-                    <img onClick={toggleNikeGallery3} src={clothesNikeAlbum.gallery3} alt="gallery"/>
-                    <img onClick={toggleNikeGallery4} src={clothesNikeAlbum.gallery4} alt="gallery"/>
-                    <img onClick={toggleNikeGallery5} src={clothesNikeAlbum.gallery5} alt="gallery"/>
+        clothesNike.inStock === true
+            ? <div className="PDP__product">
+                <div className="PDP__productImage">
+                    <div className="PDP__productAlbum">
+                        <img onClick={toggleNikeGallery1} src={clothesNikeAlbum.gallery1} alt="gallery"/>
+                        <img onClick={toggleNikeGallery2} src={clothesNikeAlbum.gallery2} alt="gallery"/>
+                        <img onClick={toggleNikeGallery3} src={clothesNikeAlbum.gallery3} alt="gallery"/>
+                        <img onClick={toggleNikeGallery4} src={clothesNikeAlbum.gallery4} alt="gallery"/>
+                        <img onClick={toggleNikeGallery5} src={clothesNikeAlbum.gallery5} alt="gallery"/>
+                    </div>
+                    <div className="PDP__productHighlightedImage">
+                        <img src={clothesNikeGallery} alt="gallery"/>
+                    </div>
                 </div>
-                <div className="PDP__productHighlightedImage">
-                    <img src={clothesNikeGallery} alt="gallery"/>
+                <div className="PDP__productInfo">
+                    <h3>{clothesNike.name}</h3>
+                    <p>Size:</p>
+                    <p>Color:</p>
+                    <p className="PDP__price">
+                        <strong>Price: {symbol}{amountNike}</strong>
+                    </p>
+                    <button onClick={addToCart}>ADD TO CART</button>
+                    <p>{clothesNike.description}</p>
                 </div>
             </div>
-            <div className="PDP__productInfo">
-                <h3>{clothesNike.name}</h3>
-                <p>Size:</p>
-                <p>Color:</p>
-                <p>
-                    <strong>Price: {symbol}{amountNike}</strong>
-                </p>
-                <button>ADD TO CART</button>
-                <p>{clothesNike.description}</p>
+            : <div className="PDP__product">
+                <div className="PDP__productImage">
+                    <div className="PDP__productAlbum">
+                        <img onClick={toggleNikeGallery1} src={clothesNikeAlbum.gallery1} alt="gallery"/>
+                        <img onClick={toggleNikeGallery2} src={clothesNikeAlbum.gallery2} alt="gallery"/>
+                        <img onClick={toggleNikeGallery3} src={clothesNikeAlbum.gallery3} alt="gallery"/>
+                        <img onClick={toggleNikeGallery4} src={clothesNikeAlbum.gallery4} alt="gallery"/>
+                        <img onClick={toggleNikeGallery5} src={clothesNikeAlbum.gallery5} alt="gallery"/>
+                    </div>
+                    <div className="PDP__productHighlightedImage">
+                        <img src={clothesNikeGallery} alt="gallery"/>
+                    </div>
+                </div>
+                <div className="PDP__productInfo">
+                    <h3>{clothesNike.name}</h3>
+                    <p>Size:</p>
+                    <p>Color:</p>
+                    <p className="PDP__price">
+                        <strong>Price: {symbol}{amountNike}</strong>
+                    </p>
+                    <h3 className="PDP__productInfoNoStock">WHOOPS... {clothesNike.name} IS NOT IN STOCK</h3>
+                </div>
             </div>
-        </div>
     );
 };
 
