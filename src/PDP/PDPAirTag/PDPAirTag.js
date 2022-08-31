@@ -1,5 +1,6 @@
 import React from 'react';
 import {useStateValue} from "../../StateProvider";
+import toast from "react-hot-toast";
 
 const PDPAirTag = () => {
     const [{
@@ -12,6 +13,31 @@ const PDPAirTag = () => {
             type: 'TOGGLE_AIRTAG_GALLERY1',
             techAirtagGallery: techAirtagGallery,
         })
+    }
+
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: techAirtag.id,
+                name: techAirtag.name,
+                gallery: techAirtagGallery,
+                description: techAirtag.description,
+                amount: amountAirtag,
+                symbol: symbol,
+            }
+        })
+        toast.success(`${techAirtag.name} has been added to your Cart!`, {
+            style: {
+                border: '2px solid lightgreen',
+                padding: '16px',
+                color: 'green',
+            },
+            iconTheme: {
+                primary: '#14e040',
+                secondary: '#e7f13b',
+            },
+        });
     }
 
     return (
@@ -32,7 +58,7 @@ const PDPAirTag = () => {
                     <p className="PDP__price">
                         <strong>Price: {symbol}{amountAirtag}</strong>
                     </p>
-                    <button>ADD TO CART</button>
+                    <button onClick={addToCart}>ADD TO CART</button>
                     <p>{techAirtag.description}</p>
                 </div>
             </div>

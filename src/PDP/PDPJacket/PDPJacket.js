@@ -1,5 +1,6 @@
 import React from 'react';
 import {useStateValue} from "../../StateProvider";
+import toast from "react-hot-toast";
 
 const PDPJacket = () => {
     const [{
@@ -68,6 +69,17 @@ const PDPJacket = () => {
                 symbol: symbol,
             }
         })
+        toast.success(`${clothesJacket.name} has been added to your Cart!`, {
+            style: {
+                border: '2px solid lightgreen',
+                padding: '16px',
+                color: 'green',
+            },
+            iconTheme: {
+                primary: '#14e040',
+                secondary: '#e7f13b',
+            },
+        });
     }
 
     return (

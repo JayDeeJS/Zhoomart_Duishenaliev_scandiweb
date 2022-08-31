@@ -3,6 +3,7 @@ import './App.css';
 import {Routes, Route} from "react-router-dom";
 import {ApolloProvider} from "@apollo/client";
 import {client} from "./index";
+import {Toaster} from "react-hot-toast";
 import {useStateValue} from "./StateProvider";
 import PLPHeader from "./PLPHeader/PLPHeader";
 import PLPTech from "./PLPTech/PLPTech";
@@ -55,6 +56,7 @@ function App() {
                     </Routes>
                 </div>
             </div>
+            <Toaster/>
         </ApolloProvider>
     );
 }

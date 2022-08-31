@@ -6,6 +6,12 @@ import CartProduct from "../CartProduct/CartProduct";
 const Cart = () => {
     const [{cart}, dispatch] = useStateValue();
 
+    const addToLocalStorage = () => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        let result = localStorage.getItem('cart');
+        console.log(result);
+    }
+
     return (
         <div className={styles.cart}>
             <div className={styles.cart__frame}>
@@ -30,10 +36,15 @@ const Cart = () => {
                         </div>
                         <h3>Quantity: {}</h3>
                         <h3>Total: {}</h3>
-                        <button className={styles.cart__cardButton}>ORDER</button>
+                        <button
+                            onClick={addToLocalStorage}
+                            className={styles.cart__cardButton}>
+                            ORDER
+                        </button>
                     </>}
             </div>
         </div>
+
     );
 };
 

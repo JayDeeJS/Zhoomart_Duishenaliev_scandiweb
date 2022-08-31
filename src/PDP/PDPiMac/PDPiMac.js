@@ -1,5 +1,6 @@
 import React from 'react';
 import {useStateValue} from "../../StateProvider";
+import toast from "react-hot-toast";
 
 const PDPiMac = () => {
     const [{
@@ -12,6 +13,31 @@ const PDPiMac = () => {
             type: 'TOGGLE_IMAC_GALLERY1',
             techiMacGallery: techiMacGallery,
         })
+    }
+
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: techiMac.id,
+                name: techiMac.name,
+                gallery: techiMacGallery,
+                description: techiMac.description,
+                amount: amountiMac,
+                symbol: symbol,
+            }
+        })
+        toast.success(`${techiMac.name} has been added to your Cart!`, {
+            style: {
+                border: '2px solid lightgreen',
+                padding: '16px',
+                color: 'green',
+            },
+            iconTheme: {
+                primary: '#14e040',
+                secondary: '#e7f13b',
+            },
+        });
     }
 
     return (
@@ -32,7 +58,7 @@ const PDPiMac = () => {
                     <p className="PDP__price">
                         <strong>Price: {symbol}{amountiMac}</strong>
                     </p>
-                    <button>ADD TO CART</button>
+                    <button onClick={addToCart}>ADD TO CART</button>
                     <p>{techiMac.description}</p>
                 </div>
             </div>

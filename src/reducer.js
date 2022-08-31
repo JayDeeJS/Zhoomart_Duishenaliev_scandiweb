@@ -1,6 +1,5 @@
 export const initialState = {
     cart: [],
-    subtotal: 0,
 
     symbol: '$',
 
