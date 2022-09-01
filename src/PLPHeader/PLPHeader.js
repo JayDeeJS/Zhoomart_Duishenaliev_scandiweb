@@ -5,6 +5,7 @@ import greenBagLogo from '../media/greenBagLogo.svg';
 import cartLogo from '../media/emptyCart.svg';
 import {gql, useQuery} from "@apollo/client";
 import {useStateValue} from "../StateProvider";
+import Cart from "../Cart/Cart";
 
 const GET_ALL_NAME = gql`
   query {
@@ -66,6 +67,16 @@ const PLPHeader = () => {
     const minimizeModalSwitcher = () => {
         const modalSwitcher = document.querySelector('.modalSwitcher');
         modalSwitcher.style.display = 'none';
+    }
+
+    const displayCartOverlay = () => {
+        const cartOverlay = document.querySelector('.cartOverlay');
+        cartOverlay.style.display = 'block';
+    }
+
+    const minimizeCartOverlay = () => {
+        const cartOverlay = document.querySelector('.cartOverlay');
+        cartOverlay.style.display = 'none';
     }
 
     const switchToUSDollar = () => {
@@ -170,6 +181,7 @@ const PLPHeader = () => {
                     </button>
                     <NavLink to="/cart">
                         <img
+                            onMouseEnter={displayCartOverlay}
                             src={cartLogo}
                             alt="cart-logo"/>
                     </NavLink>
@@ -187,6 +199,16 @@ const PLPHeader = () => {
                     <span onClick={switchTOAUDollar} className='symbol'>A$ AUD</span>
                     <span onClick={switchToJPYen} className='symbol'>¥ JPY</span>
                     <span onClick={switchToRURuble} className='symbol'>₽ RUB</span>
+                </div>
+            </div>
+            <div className="cartOverlay">
+                <button
+                    onClick={minimizeCartOverlay}
+                    className="minimizer2">
+                    &#10006;
+                </button>
+                <div className="cartOverlay__sub">
+                    <Cart/>
                 </div>
             </div>
         </>

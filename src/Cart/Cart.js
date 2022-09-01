@@ -33,14 +33,13 @@ const Cart = () => {
                                     symbol={item.symbol}
                                 />
                             ))}
+                            <button
+                                onClick={addToLocalStorage}
+                                className={styles.cart__cardButton}>
+                                ORDER
+                            </button>
                         </div>
-                        <h3>Quantity: {}</h3>
-                        <h3>Total: {}</h3>
-                        <button
-                            onClick={addToLocalStorage}
-                            className={styles.cart__cardButton}>
-                            ORDER
-                        </button>
+
                     </>}
             </div>
         </div>

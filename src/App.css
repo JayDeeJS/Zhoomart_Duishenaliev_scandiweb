@@ -141,10 +141,18 @@
     border: 1px solid darkgreen;
     border-radius: 20px;
 }
-.symbol, .minimizer{
+.minimizer2{
+    float: right;
+    margin: 5px 5px 0 0;
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+    border: 1px solid darkgreen;
+}
+.symbol, .minimizer, .minimizer2{
     cursor: pointer;
 }
-.symbol:hover, .minimizer:hover{
+.symbol:hover, .minimizer:hover, .minimizer2:hover{
     box-shadow: 0 0 16px 0 darkgreen;
 }
 .modalSwitcher{
@@ -177,6 +185,41 @@
     }
     100%{
         left: 1150px;
+        top: 90px;
+    }
+}
+
+.cartOverlay{
+    width: 300px;
+    height: 90vh;
+    position: sticky;
+    left: 1350px;
+    top: 90px;
+    display: none;
+    text-align: center;
+    animation-name: cartOverlay;
+    animation-duration: 500ms;
+    animation-iteration-count: initial;
+    z-index: 3;
+    margin-bottom: -643px;
+    background-color: ghostwhite;
+    overflow: scroll;
+}
+.cartOverlay__sub{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes cartOverlay {
+    0%{
+        left: 1350px;
+        top: 90px;
+    }
+    100%{
+        left: 1350px;
         top: 90px;
     }
 }
